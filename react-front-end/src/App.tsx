@@ -1,9 +1,10 @@
 import "./App.css";
+import TopNav from "./components/TopNav";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <h1>App Bar + Drawers</h1>
+      <TopNav />
       <h1>Rotating Carousel</h1>
       <h1>Quick links + buttons</h1>
       <h1>Inside Scoop section showcasing products</h1>
@@ -19,6 +20,6 @@ function App() {
       <h1>Bottom banner for copywrite and privacy policy</h1>
     </div>
   );
-}
+};
 
 export default App;
