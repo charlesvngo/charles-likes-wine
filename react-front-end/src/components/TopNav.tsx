@@ -127,7 +127,7 @@ const TopNav = (props: props) => {
       {/* Drawer for list items */}
       {drawer && (
         <Box sx={{ backgroundColor: "white" }}>
-          <WineList />
+          <WineList></WineList>
         </Box>
       )}
     </Box>
