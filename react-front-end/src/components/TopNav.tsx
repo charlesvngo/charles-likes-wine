@@ -17,6 +17,8 @@ import {
 
 import WineBarRoundedIcon from "@mui/icons-material/WineBarRounded";
 
+import WineList from "./WineList";
+
 const pages = ["On Sale", "Shop", "Explore", "Learn"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
@@ -125,7 +127,7 @@ const TopNav = (props: props) => {
       {/* Drawer for list items */}
       {drawer && (
         <Box sx={{ backgroundColor: "white" }}>
-          <Typography>Drawer Opens on Click</Typography>
+          <WineList />
         </Box>
       )}
     </Box>
