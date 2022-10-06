@@ -42,6 +42,16 @@ const WineList = () => {
     "Under $20",
   ];
 
+  const otherWines = [
+    "All Sparkling",
+    "Rose",
+    "Grab & Go",
+    "Box Wine",
+    "Fortified",
+    "Sake",
+    "Other Options",
+  ];
+
   return (
     <>
       <List
@@ -49,7 +59,7 @@ const WineList = () => {
         component="nav"
         aria-labelledby="nested-list-subheader"
         subheader={
-          <ListSubheader component="div" id="nested-list-subheader">
+          <ListSubheader component="div" id="redwine-list-subheader">
             Red Wines
           </ListSubheader>
         }
@@ -67,12 +77,30 @@ const WineList = () => {
         component="nav"
         aria-labelledby="nested-list-subheader"
         subheader={
-          <ListSubheader component="div" id="nested-list-subheader">
+          <ListSubheader component="div" id="whitewine-list-subheader">
             White Wines
           </ListSubheader>
         }
       >
         {whiteWines.map((listItem) => {
+          return (
+            <ListItemButton>
+              <ListItemText primary={listItem} />
+            </ListItemButton>
+          );
+        })}
+      </List>
+      <List
+        sx={{ width: "100%", bgcolor: "background.paper" }}
+        component="nav"
+        aria-labelledby="nested-list-subheader"
+        subheader={
+          <ListSubheader component="div" id="otherwines-list-subheader">
+            Sparkling Wines & More
+          </ListSubheader>
+        }
+      >
+        {otherWines.map((listItem) => {
           return (
             <ListItemButton>
               <ListItemText primary={listItem} />
