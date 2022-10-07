@@ -1,7 +1,4 @@
-import ListSubheader from "@mui/material/ListSubheader";
-import List from "@mui/material/List";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
+import WineListItem from "./WineListItem";
 
 const WineList = () => {
   const redWines = [
@@ -52,62 +49,36 @@ const WineList = () => {
     "Other Options",
   ];
 
+  const beersAndCiders = [
+    "All Beer",
+    "Coolers",
+    "Domestic Beer",
+    "Domestic Craft Beer",
+    "Import Beer",
+    "Cider",
+  ];
+
+  const spirits = [
+    "All Spirits",
+    "Whisky",
+    "Vodka",
+    "Brandy",
+    "Cognac",
+    "Gin",
+    "Tequila/Mezcal",
+    "Rum",
+    "Liqueurs",
+    "Others",
+    "Refreshment Beverages",
+  ];
+
   return (
     <>
-      <List
-        sx={{ width: "100%", bgcolor: "background.paper" }}
-        component="nav"
-        aria-labelledby="nested-list-subheader"
-        subheader={
-          <ListSubheader component="div" id="redwine-list-subheader">
-            Red Wines
-          </ListSubheader>
-        }
-      >
-        {redWines.map((listItem) => {
-          return (
-            <ListItemButton>
-              <ListItemText primary={listItem} />
-            </ListItemButton>
-          );
-        })}
-      </List>
-      <List
-        sx={{ width: "100%", bgcolor: "background.paper" }}
-        component="nav"
-        aria-labelledby="nested-list-subheader"
-        subheader={
-          <ListSubheader component="div" id="whitewine-list-subheader">
-            White Wines
-          </ListSubheader>
-        }
-      >
-        {whiteWines.map((listItem) => {
-          return (
-            <ListItemButton>
-              <ListItemText primary={listItem} />
-            </ListItemButton>
-          );
-        })}
-      </List>
-      <List
-        sx={{ width: "100%", bgcolor: "background.paper" }}
-        component="nav"
-        aria-labelledby="nested-list-subheader"
-        subheader={
-          <ListSubheader component="div" id="otherwines-list-subheader">
-            Sparkling Wines & More
-          </ListSubheader>
-        }
-      >
-        {otherWines.map((listItem) => {
-          return (
-            <ListItemButton>
-              <ListItemText primary={listItem} />
-            </ListItemButton>
-          );
-        })}
-      </List>
+      <WineListItem list={redWines} type={"Red Wines"} />
+      <WineListItem list={whiteWines} type={"White Wines"} />
+      <WineListItem list={otherWines} type={"Sparkling Wines & More"} />
+      <WineListItem list={beersAndCiders} type={"Beer, Coolers & Cider"} />
+      <WineListItem list={spirits} type={"Spirits"} />
     </>
   );
 };
