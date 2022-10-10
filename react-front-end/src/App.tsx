@@ -1,12 +1,13 @@
 import "./App.css";
 
+import NewsCarousel from "./components/Carousel";
 import TopNav from "./components/TopNav";
 
 const App = () => {
   return (
     <div className="App">
       <TopNav />
-      <h1>Rotating Carousel</h1>
+      <NewsCarousel />
       <h1>Quick links + buttons</h1>
       <h1>Inside Scoop section showcasing products</h1>
       <h1>Card to show you can pickup instore</h1>
