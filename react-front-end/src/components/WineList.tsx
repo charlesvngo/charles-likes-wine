@@ -1,3 +1,5 @@
+import { Box } from "@mui/material";
+
 import WineListItem from "./WineListItem";
 
 const WineList = () => {
@@ -73,13 +75,13 @@ const WineList = () => {
   ];
 
   return (
-    <>
+    <Box sx={{ display: "flex" }}>
       <WineListItem list={redWines} type={"Red Wines"} />
       <WineListItem list={whiteWines} type={"White Wines"} />
       <WineListItem list={otherWines} type={"Sparkling Wines & More"} />
       <WineListItem list={beersAndCiders} type={"Beer, Coolers & Cider"} />
       <WineListItem list={spirits} type={"Spirits"} />
-    </>
+    </Box>
   );
 };
 
